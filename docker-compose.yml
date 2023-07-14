@@ -33,10 +33,10 @@ services:
       - 3306:3306
 
   go:
-    build: ./go
+    build: ./server
     volumes:
-      - ./go:/app
-    container_name: go
+      - ./server:/app
+    container_name: server
     tty: true
     ports:
       - "8000:8000"
