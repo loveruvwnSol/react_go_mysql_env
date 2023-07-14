@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  app:
+  client:
     container_name: client
     build:
       context: .
@@ -32,7 +32,7 @@ services:
     ports:
       - 3306:3306
 
-  go:
+  server:
     build: ./server
     volumes:
       - ./server:/app
